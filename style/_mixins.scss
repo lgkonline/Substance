@@ -1,0 +1,81 @@
+@mixin substance-box-shadow($box-shadow-base-size, $box-shadow-color: rgba(0,0,0,.16)) {
+    $right-base: $box-shadow-base-size * .1;
+
+    box-shadow: 
+        $right-base $box-shadow-base-size 0 $box-shadow-color,
+        ($right-base * 2) ($box-shadow-base-size * 2) 0 $box-shadow-color,
+        ($right-base * 3) ($box-shadow-base-size * 3) 0 $box-shadow-color;
+}
+
+@mixin gradient-substance-effect($color, $direction: down, $gradient-type: linear) {
+    $color1: $color;
+    $color2: rgba($color, .95);
+    $color3: rgba($color, .9);
+    $color4: rgba($color, .85);
+
+    @if $direction == up {
+        $color1: rgba($color, .85);
+        $color2: rgba($color, .9);
+        $color3: rgba($color, .95);
+        $color4: $color;
+    }
+
+    background-color: $color;
+
+    @if $gradient-type == linear {
+    background: linear-gradient(
+        $color1 0%, 
+        $color1 25%, 
+        $color2 25%,
+        $color2 50%,
+        $color3 50%,
+        $color3 75%,
+        $color4 75%,
+        $color4 100%
+    );
+    }
+    @else {
+        background: radial-gradient(
+            $color1 0%, 
+            $color1 25%, 
+            $color2 25%,
+            $color2 50%,
+            $color3 50%,
+            $color3 75%,
+            $color4 75%,
+            $color4 100%
+        );
+    }
+}
+
+@mixin button-variant($bg-color, $color: $everything) {
+	background-color: $bg-color;
+	color: $color;
+    transition: all .5s;
+    border: 1px solid rgba($color, .1);
+    @include gradient-substance-effect($bg-color);
+    @include substance-box-shadow(.2em);
+
+    &:hover,
+    &:focus {
+        @include gradient-substance-effect(lighten($bg-color, 6%));
+        @include substance-box-shadow(.3em);
+    }
+
+    &:active {
+        @include gradient-substance-effect(darken($bg-color, 10%), down, radial);
+        @include substance-box-shadow(.1em);    
+    }
+}
+
+@mixin control($color) {
+    padding: 1em 2em;
+    border-radius: .5em;
+    box-shadow: 0 .1em 0em $color;
+    transition: all .5s;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 .2em 0em $color;
+    }
+}

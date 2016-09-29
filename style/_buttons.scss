@@ -1,0 +1,14 @@
+.btn {
+    cursor: pointer;
+    border: none;
+    border-radius: .6em;
+    padding: 1em 2em;
+
+    &.btn-primary {
+        @include button-variant($salmon);
+    }
+
+    &.btn-secondary {
+        @include button-variant($clouds, $text);
+    }  
+}

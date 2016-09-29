@@ -1,0 +1,32 @@
+@import "substance";
+
+#box {
+    width: 20em;
+    height: 10em;
+    position: absolute;
+    left: 50%;
+    margin-left: -20em;
+    top: 2em;
+    border: none;
+    border-radius: 2em;
+
+    @include button-variant($salmon);
+}
+
+
+
+$form-width: 50em;
+#form {
+    position: absolute;
+    width: $form-width;
+    margin-left: -($form-width / 2);
+    background-color: $clouds;
+    padding: 2em;
+    border-radius: 1em;
+    top: 1em;
+    margin-bottom: 1em;
+    left: 50%;
+
+    padding-top: 6em;
+    @include substance-box-shadow(3em);
+}
