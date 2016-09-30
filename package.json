@@ -18,5 +18,8 @@
   "homepage": "https://github.com/lgkonline/Substance#readme",
   "devDependencies": {
     "bootstrap": "^4.0.0-alpha.4"
+  },
+  "dependencies": {
+    "node-waves": "^0.7.5"
   }
 }

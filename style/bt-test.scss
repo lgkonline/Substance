@@ -4,7 +4,7 @@
 @import "substance";
 
 body {
-    @include substance-gradient(#634591);
+    @include substance-gradient($lily);
 }
 
 #content {
@@ -14,3 +14,9 @@ body {
     margin-top: 1em;
     @include substance-box-shadow(3em);
 }
+
+.page-header {
+    margin-top: 3rem;
+}
+
+@import "../node_modules/node-waves/src/scss/waves";

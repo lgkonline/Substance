@@ -17,11 +17,17 @@
 
                 <h1 class="display-3">Substance w/ Bootstrap</h1>
 
-                <input type="text" class="form-control">
+                <p>This is Bootstrap 4 Alpha</p>
 
-                <textarea class="form-control m-t-1"></textarea>
+                <input type="text" class="form-control" placeholder="Enter something">
+
+                <textarea class="form-control m-t-1" placeholder="This is a textarea"></textarea>
 
                 <div class="m-t-1">
+                    <h2 class="page-header">Buttons with waves</h2>
+
+                    <p><a href="http://fian.my.id/Waves">http://fian.my.id/Waves</a></p>
+
                     <button type="button" class="btn btn-primary">Button</button>
                     <button type="button" class="btn btn-secondary">Button</button>
                     <button type="button" class="btn btn-success">Button</button>
@@ -31,5 +37,11 @@
                 </div>
             </div>
         </div>
+
+        <script src="node_modules/node-waves/dist/waves.min.js"></script>
+        <script>
+            Waves.attach('.btn');
+            Waves.init();
+        </script>
 	</body>
 </html>
