@@ -7,7 +7,7 @@
         ($right-base * 3) ($box-shadow-base-size * 3) 0 $box-shadow-color;
 }
 
-@mixin gradient-substance-effect($color, $direction: down, $gradient-type: linear) {
+@mixin substance-gradient($color, $direction: down, $gradient-type: linear) {
     $color1: $color;
     $color2: rgba($color, .95);
     $color3: rgba($color, .9);
@@ -53,17 +53,17 @@
 	color: $color;
     transition: all .5s;
     border: 1px solid rgba($color, .1);
-    @include gradient-substance-effect($bg-color);
+    @include substance-gradient($bg-color);
     @include substance-box-shadow(.2em);
 
     &:hover,
     &:focus {
-        @include gradient-substance-effect(lighten($bg-color, 6%));
+        @include substance-gradient(lighten($bg-color, 6%));
         @include substance-box-shadow(.3em);
     }
 
     &:active {
-        @include gradient-substance-effect(darken($bg-color, 10%), down, radial);
+        @include substance-gradient(darken($bg-color, 10%), down, radial);
         @include substance-box-shadow(.1em);    
     }
 }

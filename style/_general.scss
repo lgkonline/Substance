@@ -4,7 +4,7 @@ body {
 }
 
 body {
-    @include gradient-substance-effect($wood);
+    @include substance-gradient($wood);
     font-family: "Rubik", sans-serif;
 }
 
