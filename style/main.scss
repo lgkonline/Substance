@@ -14,7 +14,7 @@ body {
     border: none;
     border-radius: 2em;
 
-    @include button-variant($salmon);
+    @include button-variant($brand-primary);
 }
 
 

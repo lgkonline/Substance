@@ -5,10 +5,26 @@
     padding: $btn-padding;
 
     &.btn-primary {
-        @include button-variant($salmon);
+        @include button-variant($brand-primary);
     }
 
     &.btn-secondary {
         @include button-variant($clouds, $text);
+    } 
+
+    &.btn-success {
+        @include button-variant($brand-success);
+    }   
+
+    &.btn-info {
+        @include button-variant($brand-info);
+    }   
+
+    &.btn-warning {
+        @include button-variant($brand-warning, $text);
+    }  
+
+    &.btn-danger {
+        @include button-variant($brand-danger);
     }  
 }

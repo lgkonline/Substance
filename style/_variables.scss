@@ -14,7 +14,14 @@ $nothing: #000000;
 $everything: #ffffff; 
 $lily: #b02352; 
 $salmon: #db5344; 
-$text: #333333;
+$text: #333333; 
+$tamarillo: #991222;
+
+$brand-primary:             $salmon !default;
+$brand-success:             $leaf !default;
+$brand-info:                $sky !default;
+$brand-warning:             $sun !default;
+$brand-danger:              $tamarillo !default;
 
 $padding: .6em 1em;
 

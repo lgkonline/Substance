@@ -48,12 +48,12 @@
     }
 }
 
-@mixin substance-gradient-space($color: $clouds, $bg-color: #fff) {
+@mixin substance-gradient-space($color: $clouds, $bg-color: #fff, $colorM: rgba($color, .6)) {
     background-color: $bg-color;
 
     $color1: $color;
     $color2: rgba($color, .75);
-    $colorM: rgba($color, .6);
+
     $color3: rgba($color, .7);
     $color4: rgba($color, .65);
 
@@ -83,20 +83,19 @@
     transition: all .5s;
     @include control-border($color);
     @include substance-gradient($bg-color);
-    @include substance-box-shadow(.2em);
+    @include substance-box-shadow(.1em);
 
     &:hover,
     &:focus {
         @include substance-gradient(lighten($bg-color, 6%));
-        @include substance-box-shadow(.3em);
-        // transform: scale(.9);
+        @include substance-box-shadow(.2em);
         transform: translateY(-.3em);
     }
 
     &:active {
         @include substance-gradient(darken($bg-color, 10%), down, radial);
-        @include substance-box-shadow(.1em);    
-        transform: translateY(.3em);
+        @include substance-box-shadow(0em);    
+        transform: translateY(.2em);
     }
 }
 
@@ -104,15 +103,21 @@
     padding: $form-control-padding;
     border-radius: $form-control-border-radius;
     transition: all .5s;
-    @include control-border($text-color);
+    border: 1px solid $clouds;
+    @include substance-box-shadow(0em);    
 
     @include substance-gradient-space();  
 
     &:hover {
-        @include substance-gradient-space(lighten($clouds, 6%));
+        @include substance-box-shadow(.1em); 
+        @include substance-gradient-space(lighten($clouds, 2%));
+        transform: translateY(-.1em);
     }
 
     &:focus {
-        @include substance-gradient-space(lighten($clouds, 4%));
+        border-color: $brand-primary;
+        @include substance-gradient-space(lighten($clouds, 1%));
+        @include substance-box-shadow(0em); 
+        transform: translateY(.1em);
     }
 }
