@@ -1,8 +1,8 @@
 .btn {
     cursor: pointer;
     border: none;
-    border-radius: .6em;
-    padding: 1em 2em;
+    border-radius: $btn-border-radius;
+    padding: $btn-padding;
 
     &.btn-primary {
         @include button-variant($salmon);

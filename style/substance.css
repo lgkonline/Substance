@@ -370,8 +370,8 @@ body {
   height: 100%; }
 
 body {
-  background-color: #825b4d;
-  background: linear-gradient(#825b4d 0%, #825b4d 25%, rgba(130, 91, 77, 0.95) 25%, rgba(130, 91, 77, 0.95) 50%, rgba(130, 91, 77, 0.9) 50%, rgba(130, 91, 77, 0.9) 75%, rgba(130, 91, 77, 0.85) 75%, rgba(130, 91, 77, 0.85) 100%);
+  background-color: transparent;
+  background-image: linear-gradient(#825b4d 0%, #825b4d 25%, rgba(130, 91, 77, 0.95) 25%, rgba(130, 91, 77, 0.95) 50%, rgba(130, 91, 77, 0.9) 50%, rgba(130, 91, 77, 0.9) 75%, rgba(130, 91, 77, 0.85) 75%, rgba(130, 91, 77, 0.85) 100%);
   font-family: "Rubik", sans-serif; }
 
 *:focus {
@@ -380,39 +380,57 @@ body {
 .btn {
   cursor: pointer;
   border: none;
-  border-radius: .6em;
-  padding: 1em 2em; }
+  border-radius: 0.4em;
+  padding: 0.6em 1em; }
   .btn.btn-primary {
     background-color: #db5344;
     color: #ffffff;
     transition: all .5s;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: #db5344;
-    background: linear-gradient(#db5344 0%, #db5344 25%, rgba(219, 83, 68, 0.95) 25%, rgba(219, 83, 68, 0.95) 50%, rgba(219, 83, 68, 0.9) 50%, rgba(219, 83, 68, 0.9) 75%, rgba(219, 83, 68, 0.85) 75%, rgba(219, 83, 68, 0.85) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background-color: transparent;
+    background-image: linear-gradient(#db5344 0%, #db5344 25%, rgba(219, 83, 68, 0.95) 25%, rgba(219, 83, 68, 0.95) 50%, rgba(219, 83, 68, 0.9) 50%, rgba(219, 83, 68, 0.9) 75%, rgba(219, 83, 68, 0.85) 75%, rgba(219, 83, 68, 0.85) 100%);
     box-shadow: 0.02em 0.2em 0 rgba(0, 0, 0, 0.16), 0.04em 0.4em 0 rgba(0, 0, 0, 0.16), 0.06em 0.6em 0 rgba(0, 0, 0, 0.16); }
     .btn.btn-primary:hover, .btn.btn-primary:focus {
-      background-color: #e06b5e;
-      background: linear-gradient(#e06b5e 0%, #e06b5e 25%, rgba(224, 107, 94, 0.95) 25%, rgba(224, 107, 94, 0.95) 50%, rgba(224, 107, 94, 0.9) 50%, rgba(224, 107, 94, 0.9) 75%, rgba(224, 107, 94, 0.85) 75%, rgba(224, 107, 94, 0.85) 100%);
-      box-shadow: 0.03em 0.3em 0 rgba(0, 0, 0, 0.16), 0.06em 0.6em 0 rgba(0, 0, 0, 0.16), 0.09em 0.9em 0 rgba(0, 0, 0, 0.16); }
+      background-color: transparent;
+      background-image: linear-gradient(#e06b5e 0%, #e06b5e 25%, rgba(224, 107, 94, 0.95) 25%, rgba(224, 107, 94, 0.95) 50%, rgba(224, 107, 94, 0.9) 50%, rgba(224, 107, 94, 0.9) 75%, rgba(224, 107, 94, 0.85) 75%, rgba(224, 107, 94, 0.85) 100%);
+      box-shadow: 0.03em 0.3em 0 rgba(0, 0, 0, 0.16), 0.06em 0.6em 0 rgba(0, 0, 0, 0.16), 0.09em 0.9em 0 rgba(0, 0, 0, 0.16);
+      transform: translateY(-0.3em); }
     .btn.btn-primary:active {
-      background-color: #c63626;
-      background: radial-gradient(#c63626 0%, #c63626 25%, rgba(198, 54, 38, 0.95) 25%, rgba(198, 54, 38, 0.95) 50%, rgba(198, 54, 38, 0.9) 50%, rgba(198, 54, 38, 0.9) 75%, rgba(198, 54, 38, 0.85) 75%, rgba(198, 54, 38, 0.85) 100%);
-      box-shadow: 0.01em 0.1em 0 rgba(0, 0, 0, 0.16), 0.02em 0.2em 0 rgba(0, 0, 0, 0.16), 0.03em 0.3em 0 rgba(0, 0, 0, 0.16); }
+      background-color: transparent;
+      background-image: radial-gradient(#c63626 0%, #c63626 25%, rgba(198, 54, 38, 0.95) 25%, rgba(198, 54, 38, 0.95) 50%, rgba(198, 54, 38, 0.9) 50%, rgba(198, 54, 38, 0.9) 75%, rgba(198, 54, 38, 0.85) 75%, rgba(198, 54, 38, 0.85) 100%);
+      box-shadow: 0.01em 0.1em 0 rgba(0, 0, 0, 0.16), 0.02em 0.2em 0 rgba(0, 0, 0, 0.16), 0.03em 0.3em 0 rgba(0, 0, 0, 0.16);
+      transform: translateY(0.3em); }
   .btn.btn-secondary {
     background-color: #ededed;
     color: #333333;
     transition: all .5s;
-    border: 1px solid rgba(51, 51, 51, 0.1);
-    background-color: #ededed;
-    background: linear-gradient(#ededed 0%, #ededed 25%, rgba(237, 237, 237, 0.95) 25%, rgba(237, 237, 237, 0.95) 50%, rgba(237, 237, 237, 0.9) 50%, rgba(237, 237, 237, 0.9) 75%, rgba(237, 237, 237, 0.85) 75%, rgba(237, 237, 237, 0.85) 100%);
+    border: 1px solid rgba(51, 51, 51, 0.06);
+    background-color: transparent;
+    background-image: linear-gradient(#ededed 0%, #ededed 25%, rgba(237, 237, 237, 0.95) 25%, rgba(237, 237, 237, 0.95) 50%, rgba(237, 237, 237, 0.9) 50%, rgba(237, 237, 237, 0.9) 75%, rgba(237, 237, 237, 0.85) 75%, rgba(237, 237, 237, 0.85) 100%);
     box-shadow: 0.02em 0.2em 0 rgba(0, 0, 0, 0.16), 0.04em 0.4em 0 rgba(0, 0, 0, 0.16), 0.06em 0.6em 0 rgba(0, 0, 0, 0.16); }
     .btn.btn-secondary:hover, .btn.btn-secondary:focus {
-      background-color: #fcfcfc;
-      background: linear-gradient(#fcfcfc 0%, #fcfcfc 25%, rgba(252, 252, 252, 0.95) 25%, rgba(252, 252, 252, 0.95) 50%, rgba(252, 252, 252, 0.9) 50%, rgba(252, 252, 252, 0.9) 75%, rgba(252, 252, 252, 0.85) 75%, rgba(252, 252, 252, 0.85) 100%);
-      box-shadow: 0.03em 0.3em 0 rgba(0, 0, 0, 0.16), 0.06em 0.6em 0 rgba(0, 0, 0, 0.16), 0.09em 0.9em 0 rgba(0, 0, 0, 0.16); }
+      background-color: transparent;
+      background-image: linear-gradient(#fcfcfc 0%, #fcfcfc 25%, rgba(252, 252, 252, 0.95) 25%, rgba(252, 252, 252, 0.95) 50%, rgba(252, 252, 252, 0.9) 50%, rgba(252, 252, 252, 0.9) 75%, rgba(252, 252, 252, 0.85) 75%, rgba(252, 252, 252, 0.85) 100%);
+      box-shadow: 0.03em 0.3em 0 rgba(0, 0, 0, 0.16), 0.06em 0.6em 0 rgba(0, 0, 0, 0.16), 0.09em 0.9em 0 rgba(0, 0, 0, 0.16);
+      transform: translateY(-0.3em); }
     .btn.btn-secondary:active {
-      background-color: lightgray;
-      background: radial-gradient(lightgray 0%, lightgray 25%, rgba(211, 211, 211, 0.95) 25%, rgba(211, 211, 211, 0.95) 50%, rgba(211, 211, 211, 0.9) 50%, rgba(211, 211, 211, 0.9) 75%, rgba(211, 211, 211, 0.85) 75%, rgba(211, 211, 211, 0.85) 100%);
-      box-shadow: 0.01em 0.1em 0 rgba(0, 0, 0, 0.16), 0.02em 0.2em 0 rgba(0, 0, 0, 0.16), 0.03em 0.3em 0 rgba(0, 0, 0, 0.16); }
+      background-color: transparent;
+      background-image: radial-gradient(lightgray 0%, lightgray 25%, rgba(211, 211, 211, 0.95) 25%, rgba(211, 211, 211, 0.95) 50%, rgba(211, 211, 211, 0.9) 50%, rgba(211, 211, 211, 0.9) 75%, rgba(211, 211, 211, 0.85) 75%, rgba(211, 211, 211, 0.85) 100%);
+      box-shadow: 0.01em 0.1em 0 rgba(0, 0, 0, 0.16), 0.02em 0.2em 0 rgba(0, 0, 0, 0.16), 0.03em 0.3em 0 rgba(0, 0, 0, 0.16);
+      transform: translateY(0.3em); }
+
+.form-control {
+  padding: 0.6em 1em;
+  border-radius: 0.2em;
+  transition: all .5s;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  background-image: linear-gradient(#ededed 0%, #ededed 12%, rgba(237, 237, 237, 0.75) 12%, rgba(237, 237, 237, 0.75) 25%, rgba(237, 237, 237, 0.6) 25%, rgba(237, 237, 237, 0.6) 75%, rgba(237, 237, 237, 0.7) 75%, rgba(237, 237, 237, 0.7) 82%, rgba(237, 237, 237, 0.65) 82%, rgba(237, 237, 237, 0.65) 100%); }
+  .form-control:hover {
+    background-color: #fff;
+    background-image: linear-gradient(#fcfcfc 0%, #fcfcfc 12%, rgba(252, 252, 252, 0.75) 12%, rgba(252, 252, 252, 0.75) 25%, rgba(252, 252, 252, 0.6) 25%, rgba(252, 252, 252, 0.6) 75%, rgba(252, 252, 252, 0.7) 75%, rgba(252, 252, 252, 0.7) 82%, rgba(252, 252, 252, 0.65) 82%, rgba(252, 252, 252, 0.65) 100%); }
+  .form-control:focus {
+    background-color: #fff;
+    background-image: linear-gradient(#f7f7f7 0%, #f7f7f7 12%, rgba(247, 247, 247, 0.75) 12%, rgba(247, 247, 247, 0.75) 25%, rgba(247, 247, 247, 0.6) 25%, rgba(247, 247, 247, 0.6) 75%, rgba(247, 247, 247, 0.7) 75%, rgba(247, 247, 247, 0.7) 82%, rgba(247, 247, 247, 0.65) 82%, rgba(247, 247, 247, 0.65) 100%); }
 
 /*# sourceMappingURL=substance.css.map */

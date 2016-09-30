@@ -7,7 +7,7 @@
         ($right-base * 3) ($box-shadow-base-size * 3) 0 $box-shadow-color;
 }
 
-@mixin substance-gradient($color, $direction: down, $gradient-type: linear) {
+@mixin substance-gradient($color, $direction: down, $gradient-type: linear, $bg-color: transparent) {
     $color1: $color;
     $color2: rgba($color, .95);
     $color3: rgba($color, .9);
@@ -20,10 +20,10 @@
         $color4: $color;
     }
 
-    background-color: $color;
+    background-color: $bg-color;
 
     @if $gradient-type == linear {
-    background: linear-gradient(
+    background-image: linear-gradient(
         $color1 0%, 
         $color1 25%, 
         $color2 25%,
@@ -35,7 +35,7 @@
     );
     }
     @else {
-        background: radial-gradient(
+        background-image: radial-gradient(
             $color1 0%, 
             $color1 25%, 
             $color2 25%,
@@ -48,11 +48,40 @@
     }
 }
 
+@mixin substance-gradient-space($color: $clouds, $bg-color: #fff) {
+    background-color: $bg-color;
+
+    $color1: $color;
+    $color2: rgba($color, .75);
+    $colorM: rgba($color, .6);
+    $color3: rgba($color, .7);
+    $color4: rgba($color, .65);
+
+    background-image: linear-gradient(
+        $color1 0%, 
+        $color1 12%, 
+        $color2 12%,
+        $color2 25%,
+
+        $colorM 25%,
+        $colorM 75%,
+
+        $color3 75%,
+        $color3 82%,
+        $color4 82%,
+        $color4 100%
+    );       
+}
+
+@mixin control-border($color: $everything, $behavior: normal) {
+    border: 1px solid rgba($color, .06);    
+}
+
 @mixin button-variant($bg-color, $color: $everything) {
 	background-color: $bg-color;
 	color: $color;
     transition: all .5s;
-    border: 1px solid rgba($color, .1);
+    @include control-border($color);
     @include substance-gradient($bg-color);
     @include substance-box-shadow(.2em);
 
@@ -60,22 +89,30 @@
     &:focus {
         @include substance-gradient(lighten($bg-color, 6%));
         @include substance-box-shadow(.3em);
+        // transform: scale(.9);
+        transform: translateY(-.3em);
     }
 
     &:active {
         @include substance-gradient(darken($bg-color, 10%), down, radial);
         @include substance-box-shadow(.1em);    
+        transform: translateY(.3em);
     }
 }
 
-@mixin control($color) {
-    padding: 1em 2em;
-    border-radius: .5em;
-    box-shadow: 0 .1em 0em $color;
+@mixin form-control($text-color: $nothing) {
+    padding: $form-control-padding;
+    border-radius: $form-control-border-radius;
     transition: all .5s;
+    @include control-border($text-color);
 
-    &:hover,
+    @include substance-gradient-space();  
+
+    &:hover {
+        @include substance-gradient-space(lighten($clouds, 6%));
+    }
+
     &:focus {
-        box-shadow: 0 .2em 0em $color;
+        @include substance-gradient-space(lighten($clouds, 4%));
     }
 }
