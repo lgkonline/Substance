@@ -1,5 +1,9 @@
 @import "substance";
 
+body {
+    @include substance-gradient($wood);
+}
+
 #box {
     width: 20em;
     height: 10em;
@@ -27,6 +31,5 @@ $form-width: 50em;
     margin-bottom: 1em;
     left: 50%;
 
-    padding-top: 6em;
     @include substance-box-shadow(3em);
 }

@@ -1,0 +1,22 @@
+{
+  "name": "substance",
+  "version": "1.0.0",
+  "description": "Substance Design by LGK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgkonline/Substance.git"
+  },
+  "author": "LGK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lgkonline/Substance/issues"
+  },
+  "homepage": "https://github.com/lgkonline/Substance#readme",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.4"
+  }
+}
