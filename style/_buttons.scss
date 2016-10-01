@@ -7,24 +7,40 @@
     &.btn-primary {
         @include button-variant($brand-primary);
     }
-
     &.btn-secondary {
         @include button-variant($clouds, $text);
     } 
-
     &.btn-success {
         @include button-variant($brand-success);
-    }   
-
+    }
     &.btn-info {
         @include button-variant($brand-info);
-    }   
-
+    }
     &.btn-warning {
         @include button-variant($brand-warning, $text);
-    }  
-
+    }
     &.btn-danger {
         @include button-variant($brand-danger);
-    }  
+    }
+
+    // Outline
+
+    &.btn-outline-primary {
+        @include button-outline-variant($brand-primary);
+    }
+    &.btn-outline-secondary {
+        @include button-outline-variant($clouds, $text, darken($clouds, 20%));
+    }
+    &.btn-outline-success {
+        @include button-outline-variant($brand-success);
+    } 
+    &.btn-outline-info {
+        @include button-outline-variant($brand-info);
+    }       
+    &.btn-outline-warning {
+        @include button-outline-variant($brand-warning, $text, darken($brand-warning, 26%));
+    }    
+    &.btn-outline-danger {
+        @include button-outline-variant($brand-danger);
+    }    
 }

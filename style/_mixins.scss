@@ -20,7 +20,7 @@
         $color4: $color;
     }
 
-    background-color: $bg-color;
+    background-color: $bg-color !important;
 
     @if $gradient-type == linear {
     background-image: linear-gradient(
@@ -77,25 +77,63 @@
     border: 1px solid rgba($color, .06);    
 }
 
-@mixin button-variant($bg-color, $color: $everything) {
+@mixin button-base($bg-color, $color: $everything, $border-color: $bg-color) {
 	background-color: $bg-color;
-	color: $color;
     transition: all .5s;
-    @include control-border($color);
-    @include substance-gradient($bg-color);
+    border: 1px solid $border-color;
     @include substance-box-shadow(.1em);
+
+    &.btn-lg {
+        @include substance-box-shadow(.16em);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $bg-color;
+    }
 
     &:hover,
     &:focus {
-        @include substance-gradient(lighten($bg-color, 6%));
+        @include substance-gradient(lighten($bg-color, 6%), up);
         @include substance-box-shadow(.2em);
         transform: translateY(-.3em);
+
+        &.btn-lg {
+            @include substance-box-shadow(.26em);
+        }        
     }
 
     &:active {
         @include substance-gradient(darken($bg-color, 10%), down, radial);
         @include substance-box-shadow(0em);    
         transform: translateY(.2em);
+
+        &.btn-lg {
+            @include substance-box-shadow(0em);
+            transform: translateY(.26em);
+        }        
+    }    
+}
+
+@mixin button-variant($bg-color, $color: $everything) {
+    @include button-base($bg-color, $color);
+
+	background-color: $bg-color;
+	color: $color;
+    @include substance-gradient($bg-color, up);
+}
+
+@mixin button-outline-variant($bg-color, $color: $everything, $border-color: $bg-color) {
+    @include button-base($bg-color, $color, $border-color);
+
+	background-color: transparent;
+	color: $border-color;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color;
     }
 }
 

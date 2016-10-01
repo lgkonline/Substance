@@ -1,0 +1,43 @@
+.modal {
+    text-align: center;
+    padding: 0 !important;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+
+    .modal-content {
+        @include substance-gradient($clouds);
+        border-color: $clouds;
+        transition: all .5s;
+
+        &,
+        &.out {
+            transform: scale(1.5);
+            @include substance-box-shadow(1em);
+        }
+    }
+
+    &.in {
+        .modal-content {
+            transform: scale(1);
+            @include substance-box-shadow(3em);
+        }
+    } 
+}
+
+.modal-backdrop {
+    @include substance-gradient(#000);
+    background-attachment: fixed;
+}

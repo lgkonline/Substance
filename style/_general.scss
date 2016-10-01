@@ -10,3 +10,11 @@ body {
 *:focus {
     outline: none !important;
 }
+
+.bg-faded {
+    @include substance-gradient($clouds, down, linear, #fff);
+}
+
+.bg-primary {
+    @include substance-gradient($brand-primary, down, linear, #fff);
+}

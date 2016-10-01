@@ -1,0 +1,24 @@
+.card {
+    @include substance-gradient($clouds);
+    border-color: $clouds;
+
+    &.card-primary {
+        @include substance-gradient($brand-primary);
+    }
+
+    &.card-success {
+        @include substance-gradient($brand-success);
+    }
+
+    &.card-info {
+        @include substance-gradient($brand-info);
+    }
+
+    &.card-warning {
+        @include substance-gradient($brand-warning);
+    }
+
+    &.card-danger {
+        @include substance-gradient($brand-danger);
+    }
+}
