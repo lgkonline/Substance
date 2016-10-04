@@ -4,15 +4,16 @@
 @import "substance";
 
 body {
-    @include substance-gradient(#000);
-    background-attachment: fixed;
+    cursor: default;
 }
 
-#content {
-    background-color: #fff;
-    padding: 2em;
-    border-radius: 1em;
-    @include substance-box-shadow(3em);
+header {
+    @include substance-gradient($salmon);
+    color: #fff;
+}
+
+main {
+    margin-bottom: 3rem;
 }
 
 .page-header {

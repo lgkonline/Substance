@@ -1,6 +1,9 @@
 .card {
     @include substance-gradient($clouds);
-    border-color: $clouds;
+    
+    &.card-secondary {
+        border-color: $clouds;
+    }
 
     &.card-primary {
         @include substance-gradient($brand-primary);

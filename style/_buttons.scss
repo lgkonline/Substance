@@ -22,6 +22,14 @@
     &.btn-danger {
         @include button-variant($brand-danger);
     }
+    &.btn-white {
+        @include button-variant(#fff, $text);
+
+        &:hover,
+        &:focus {
+            color: $text;
+        }
+    }
 
     // Outline
 
@@ -43,4 +51,12 @@
     &.btn-outline-danger {
         @include button-outline-variant($brand-danger);
     }    
+    &.btn-outline-white {
+        @include button-outline-variant(#fff, $text);
+    }  
+
+    // no shadow on normal
+    &.n-s {
+        box-shadow: none;
+    }   
 }

@@ -24,7 +24,7 @@
 
         &,
         &.out {
-            transform: scale(1.5);
+            transform: scale(0.5);
             @include substance-box-shadow(1em);
         }
     }
